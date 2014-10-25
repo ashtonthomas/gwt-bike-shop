@@ -1,0 +1,44 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:fast="urn:import:com.biker.client.common.fast">
+	<ui:style>
+	
+	</ui:style>
+	
+	<ui:with field="css" type="com.biker.client.common.resource.CoreStyle"></ui:with>
+	
+	<g:HTMLPanel>
+
+		<fast:FastPress ui:field="foo" styleName="">
+			<fast:inner>
+				<g:HTMLPanel>
+					<ul class="nomargin {css.navItems}">
+						<li>
+							<fast:FastPress ui:field="settings"
+								styleName="nomargin {css.shopContext} {css.shopContextClick}">
+								<fast:inner>
+									<g:HTMLPanel>
+										<i class="fa fa-user"></i>
+										<span>Profile Settings</span>
+									</g:HTMLPanel>
+								</fast:inner>
+							</fast:FastPress>
+						</li>
+						<li>
+							<fast:FastPress ui:field="logout"
+								styleName="nomargin {css.shopContext} {css.shopContextClick}">
+								<fast:inner>
+									<g:HTMLPanel>
+										<i class="fa fa-sign-out"></i>
+										<span>Logout</span>
+									</g:HTMLPanel>
+								</fast:inner>
+							</fast:FastPress>
+						</li>
+					</ul>
+				</g:HTMLPanel>
+			</fast:inner>
+		</fast:FastPress>
+
+	</g:HTMLPanel>
+</ui:UiBinder> 

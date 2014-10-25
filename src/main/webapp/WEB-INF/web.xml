@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+      version="3.0">
+	<display-name>biker Project</display-name>
+
+	<!-- Add dbVerifier if DB is needed -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			/WEB-INF/spring-servlet.xml,
+			classpath:applicationContext.xml
+		</param-value>
+	</context-param>
+
+	<context-param>
+	  <param-name>gwt.xsrf.session_cookie_name</param-name>
+	  <param-value>JSESSIONID</param-value>
+	</context-param>
+
+	<mime-mapping>
+	   <extension>css</extension>
+	   <mime-type>text/css</mime-type>
+	</mime-mapping>
+
+    <mime-mapping>
+       <extension>html</extension>
+       <mime-type>text/html</mime-type>
+    </mime-mapping>
+
+    <mime-mapping>
+       <extension>js</extension>
+       <mime-type>text/javascript</mime-type>
+    </mime-mapping>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+    <!-- FILTERS -->
+	<filter>
+		<filter-name>StaticGzipFilter</filter-name>
+		<filter-class>com.biker.server.request.filter.StaticGzipFilter</filter-class>
+		<init-param>
+			<param-name>mime-types</param-name>
+			<param-value>text/html, text/css, text/javascript</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>StaticGzipFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- Servlets -->
+	<!-- Handle spring request -->
+	<servlet>
+		<servlet-name>spring</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet>
+	  <servlet-name>xsrf</servlet-name>
+	  <servlet-class>
+	    com.google.gwt.user.server.rpc.XsrfTokenServiceServlet
+	  </servlet-class>
+	</servlet>
+
+	<!-- Mappings -->
+
+	<servlet-mapping>
+	  <servlet-name>xsrf</servlet-name>
+	  <url-pattern>*.prt</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>spring</servlet-name>
+		<url-pattern>*.rpc</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>spring</servlet-name>
+		<url-pattern>/index.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>spring</servlet-name>
+		<url-pattern>/register</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>spring</servlet-name>
+		<url-pattern>/register/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>spring</servlet-name>
+		<url-pattern>/m</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>spring</servlet-name>
+		<url-pattern>/m/</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>spring</servlet-name>
+		<url-pattern>/app</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>spring</servlet-name>
+		<url-pattern>/app/</url-pattern>
+	</servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>spring</servlet-name>
+    <url-pattern>/admin</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>spring</servlet-name>
+    <url-pattern>/admin/</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>spring</servlet-name>
+    <url-pattern>/errors</url-pattern>
+   </servlet-mapping>
+    
+	<session-config>
+		<session-timeout>180</session-timeout>
+	</session-config>    
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/errors</location>
+	</error-page>
+
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

@@ -1,0 +1,111 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:fast="urn:import:com.biker.client.common.fast">
+
+	<ui:style type="com.google.gwt.resources.client.GssResource">
+		@def PRIMARY_COLOR #35bdda;
+		@def NAV_WIDTH 220px;
+		@def LOGO_HEIGHT 150px;
+		
+		@def SIDE_NAV_CONTENT #F1F6FF;
+		
+		@def BREAK_MEDIUM 850px;
+		@def BREAK_SMALL 475px;
+
+		.wrap {
+			background-color: inherit;
+			height: 100%;
+			position: relative;
+		}
+
+		.nav {
+			width: NAV_WIDTH;
+			position: relative;
+			overflow: hidden;
+			height: 0;
+		}
+
+		.logo {
+			width: NAV_WIDTH;
+			height: LOGO_HEIGHT;
+			background-color: PRIMARY_COLOR;
+			position: fixed;
+			color: #FFF;
+			left: 0;
+			top: 0;
+			text-align: center;
+			font-size: 90px;
+			line-height: 150px;
+		}
+
+		.side-content {
+			left: 0;
+			top: LOGO_HEIGHT;
+			overflow-y: auto !important;
+			overflow-x: hidden;
+			display: block;
+			position: fixed;
+			bottom: 0;
+			right: auto;
+			width: NAV_WIDTH;
+			background-color: SIDE_NAV_CONTENT;
+			border-right: 1px solid #E7EAEC;
+		}
+
+		.main-full {
+			background-color: inherit;
+			height: 100%;
+			position: relative;
+		}
+	</ui:style>
+
+	<ui:with field="css" type="com.biker.client.common.resource.CoreStyle"></ui:with>
+
+	<g:HTMLPanel styleName="{style.wrap}">
+
+		<div class="nav-hide {style.nav}">
+			<div class="{style.logo}">
+				<i class="fa fa-bicycle"></i>
+			</div>
+
+			<g:SimplePanel ui:field="main_menu_side" styleName="nomargin {style.side-content}"></g:SimplePanel>
+
+		</div>
+
+
+		<div class="{css.main}">
+			<div class="{style.main-full}">
+
+				<div class="{css.header}">
+
+					<fast:FastPress ui:field="header_menu_button" styleName="{css.headerButton} {css.headerMenuButton}">
+						<fast:inner>
+							<g:HTMLPanel>
+								<i class="fa fa-bars {css.headerMenuButtonChevron}"></i>
+							</g:HTMLPanel>
+						</fast:inner>
+					</fast:FastPress>
+
+					<fast:FastPress ui:field="header_info_button" styleName="{css.headerButton} {css.headerInfoButton}">
+						<fast:inner>
+							<g:HTMLPanel>
+								<span>Ashton</span> <i class="fa fa-chevron-down {css.headerInfoButtonChevron}"></i>
+							</g:HTMLPanel>
+						</fast:inner>
+					</fast:FastPress>
+
+					<div style="clear:both"></div>
+				</div>
+
+				<g:FlowPanel ui:field="main_menu_header_wrap" styleName="{css.headerMobileNav}">
+
+				</g:FlowPanel>
+
+				<g:SimplePanel ui:field="content"></g:SimplePanel>
+
+			</div>
+		</div>
+
+	</g:HTMLPanel>
+</ui:UiBinder>

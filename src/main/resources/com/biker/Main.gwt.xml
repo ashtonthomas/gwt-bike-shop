@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='main'>
+  <inherits name='com.biker.Core' />
+
+  <!-- Specify the app entry point class. -->
+  <entry-point
+    class='com.biker.client.main.MainAppLauncher' />
+
+</module>

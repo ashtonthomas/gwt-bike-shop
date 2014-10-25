@@ -1,0 +1,18 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	.box {
+		border: 1px solid #CCC;
+		min-height: 50px;
+		margin: 5px;
+		color: #666;
+		padding: 15px;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<div class="{style.box}">
+			Sales Associates...
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

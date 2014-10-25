@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+    <!-- Allows view names returned by Controllers to be rendered as JSPs with location based on
+         pattern /WEB-INF/jsp/[view name].jsp.  Only applies to Controllers that return
+         a ModelAndView as opposed to writing directly to the response stream and returning null. -->
+	 <bean id="viewResolver"
+		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.InternalResourceView" />
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+<!--
+    Using Spring's MVC dispatcher pattern - maps the request through to a concrete controller instance
+    Just add the @RemoteServiceRelativePath("XXX.rpc") (from your GWT service proxy) mapping as
+    below (like billing.rpc). Then create a new dispatcher instance for you service impl (see dispatchers
+    below).
+  -->
+
+	<bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<value>
+				/index.html=defaultDispatchController
+
+        /register=defaultDispatchController
+        /register/=defaultDispatchController
+
+				/app=defaultDispatchController
+				/app/=defaultDispatchController
+
+        /admin=defaultDispatchController
+        /admin/=defaultDispatchController
+
+				/errors=errorController
+			</value>
+		</property>
+	</bean>
+
+	<bean id="errorController" class="com.biker.server.request.dispatch.ErrorController"></bean>
+
+</beans>

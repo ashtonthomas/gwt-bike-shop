@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='login'>
+	<inherits name='com.biker.Core' />
+
+	<!-- Specify the app entry point class. -->
+	<entry-point
+		class='com.biker.client.login.LoginApplication' />
+
+	<!-- Collapse all of the Login deferred bindings into one permutation -->
+	<collapse-all-properties />
+
+</module>
