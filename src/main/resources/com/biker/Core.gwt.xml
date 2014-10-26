@@ -6,49 +6,49 @@
 	<inherits name="com.google.gwt.i18n.I18N" />
 
 	<!-- Other module inherits                                      -->
-  <!-- We need the MVP stuff (Activity and Place     -->
-  <!-- I am also using DepInj with Gin (Inject)    -->
-  <!-- and Resource for client bundle and stuff (not used yet)    -->
-  <!--  and also Maps for the location stuff     -->
-  <inherits name="com.google.gwt.activity.Activity"/>
-  <inherits name="com.google.gwt.place.Place"/>
-  <inherits name="com.google.gwt.inject.Inject"/>
-  <inherits name="com.google.gwt.resources.Resources"/>
-  <inherits name="com.google.gwt.text.Text"/>
-  <inherits name="com.google.gwt.resources.GssResource"/>
-  <inherits name='com.google.web.bindery.event.EventBinder'/>
+	<!-- We need the MVP stuff (Activity and Place     -->
+	<!-- I am also using DepInj with Gin (Inject)    -->
+	<!-- and Resource for client bundle and stuff (not used yet)    -->
+	<!--  and also Maps for the location stuff     -->
+	<inherits name="com.google.gwt.activity.Activity"/>
+	<inherits name="com.google.gwt.place.Place"/>
+	<inherits name="com.google.gwt.inject.Inject"/>
+	<inherits name="com.google.gwt.resources.Resources"/>
+	<inherits name="com.google.gwt.text.Text"/>
+	<inherits name="com.google.gwt.resources.GssResource"/>
+	<inherits name='com.google.web.bindery.event.EventBinder'/>
 
-  <inherits name="com.google.gwt.precompress.Precompress"/>
+	<inherits name="com.google.gwt.precompress.Precompress"/>
 
-  <!-- Include font-awesome by default -->
-  <!-- We may decide to make this include more module specific -->
-  <stylesheet src="/css/font-awesome.min.css" />
+	<!-- Include font-awesome by default -->
+	<!-- We may decide to make this include more module specific -->
+	<stylesheet src="/css/font-awesome.min.css" />
 
-  <!-- Internationalization support. -->
-  <extend-property name="locale" values="en"/>
-  <set-property-fallback name="locale" value="en"/>
-  <set-property name='locale' value='en'/>
+	<!-- Internationalization support. -->
+	<extend-property name="locale" values="en"/>
+	<set-property-fallback name="locale" value="en"/>
+	<set-property name='locale' value='en'/>
 
-  <inherits name="com.google.gwt.logging.Logging"/>
-  <set-property name="gwt.logging.enabled" value="TRUE"/>
-  <set-property name="gwt.logging.logLevel" value="ALL"/>
-  <set-property name="gwt.logging.consoleHandler" value="ENABLED" />   <!-- Browser's console -->
-  <set-property name="gwt.logging.developmentModeHandler" value="ENABLED" /> <!-- GWT.log(); compiles out. -->
-  <!-- <set-property name="gwt.logging.simpleRemoteHandler" value="ENABLED" /> -->   <!-- Server-side servlet /[module]/remote_logging -->
-  <set-property name="gwt.logging.systemHandler" value="DISABLED" /> <!-- Server-side System.out; compiles out. -->
+	<inherits name="com.google.gwt.logging.Logging"/>
+	<set-property name="gwt.logging.enabled" value="TRUE"/>
+	<set-property name="gwt.logging.logLevel" value="ALL"/>
+	<set-property name="gwt.logging.consoleHandler" value="ENABLED" />   <!-- Browser's console -->
+	<set-property name="gwt.logging.developmentModeHandler" value="ENABLED" /> <!-- GWT.log(); compiles out. -->
+	<!-- <set-property name="gwt.logging.simpleRemoteHandler" value="ENABLED" /> -->   <!-- Server-side servlet /[module]/remote_logging -->
+	<set-property name="gwt.logging.systemHandler" value="DISABLED" /> <!-- Server-side System.out; compiles out. -->
 
 	<!-- Enable Gss with CssResource -->
-  <set-configuration-property name="CssResource.enableGss" value="true" />
-  <set-configuration-property name="CssResource.legacy" value="true" />
+	<set-configuration-property name="CssResource.enableGss" value="true" />
+	<set-configuration-property name="CssResource.legacy" value="true" />
 	<set-configuration-property name="CssResource.conversionMode" value="strict" />
 
-  <!-- Specify the paths for translatable code                    -->
-  <source path='client'/>
-  <source path='shared'/>
+	<!-- Specify the paths for translatable code                    -->
+	<source path='client'/>
+	<source path='shared'/>
 
-  <!-- Go ahead and use the new linker which will eventually replace std linker -->
-  <add-linker name="xsiframe" />
+	<!-- Go ahead and use the new linker which will eventually replace std linker -->
+	<add-linker name="xsiframe" />
 
-  <collapse-all-properties />
+	<collapse-all-properties />
 
 </module>
