@@ -13,8 +13,6 @@
 		<gwtVersion>2.7.0-beta1</gwtVersion>
 		<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<closure.version>v20140820</closure.version>
-		<guava.version>17.0</guava.version>
 	</properties>
 
 	<dependencies>
@@ -37,27 +35,6 @@
       <artifactId>eventbinder</artifactId>
       <version>1.1.0</version>
     </dependency>
-		<dependency>
-        <groupId>com.github.jdramaix</groupId>
-        <artifactId>gssresource</artifactId>
-        <version>1.0-SNAPSHOT</version>
-        <scope>provided</scope>
-    </dependency>
-    <dependency>
-			<groupId>com.google.closure-stylesheets</groupId>
-			<artifactId>closure-stylesheets</artifactId>
-			<version>${closure.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.google.guava</groupId>
-			<artifactId>guava</artifactId>
-			<version>${guava.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.google.guava</groupId>
-			<artifactId>guava-gwt</artifactId>
-			<version>${guava.version}</version>
-		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
