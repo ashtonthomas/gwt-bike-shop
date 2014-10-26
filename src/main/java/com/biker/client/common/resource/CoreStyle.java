@@ -3,7 +3,8 @@ package com.biker.client.common.resource;
 import com.google.gwt.resources.client.CssResource;
 
 public interface CoreStyle extends CssResource {
-	String MIN_HEIGHT();
+	
+	String testConstantImport();
 	
 	String simplePopupGlass();
 	String simplePopupGlassGrey();

@@ -1,5 +1,6 @@
-@def MIN_HEIGHT 200px;
-
+.testConstantImport {
+	min-height: MIN_HEIGHT;
+}
 
 .simplePopupGlass {
 	gwt-image: "trnp75";
@@ -14,8 +15,6 @@
 .pseudoPopupGlass {
 	gwt-image: "trnp25";
 }
-
-
 
 @media screen and (min-width: 600px) {
 	.media-test-two {

@@ -10,7 +10,7 @@ public interface CoreClientBundle extends ClientBundle {
 	
 	static final CoreClientBundle INSTANCE = GWT.create(CoreClientBundle.class);
 	
-	@Source("styles/core.gss")
+	@Source({"styles/core.gss", "styles/constants.gss"})
 	CoreStyle coreStyle();
 	
 	@Source("images/trnp75.png")
