@@ -3,13 +3,13 @@
 	xmlns:g="urn:import:com.google.gwt.user.client.ui"
 	xmlns:fast="urn:import:com.biker.client.common.fast">
 
-	<ui:style type="com.google.gwt.resources.client.GssResource">
+	<ui:style>
 		@def PRIMARY_COLOR #35bdda;
 		@def NAV_WIDTH 220px;
 		@def LOGO_HEIGHT 150px;
-		
+
 		@def SIDE_NAV_CONTENT #F1F6FF;
-		
+
 		@def BREAK_MEDIUM 850px;
 		@def BREAK_SMALL 475px;
 
@@ -90,7 +90,7 @@
 					<fast:FastPress ui:field="header_info_button" styleName="{css.headerButton} {css.headerInfoButton}">
 						<fast:inner>
 							<g:HTMLPanel>
-								<span>Ashton</span> <i class="fa fa-chevron-down {css.headerInfoButtonChevron}"></i>
+								<span>User Name</span> <i class="fa fa-chevron-down {css.headerInfoButtonChevron}"></i>
 							</g:HTMLPanel>
 						</fast:inner>
 					</fast:FastPress>

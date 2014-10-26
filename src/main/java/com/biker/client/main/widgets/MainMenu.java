@@ -29,7 +29,7 @@ public class MainMenu extends Composite {
 
 	interface MainMenuUiBinder extends UiBinder<Widget, MainMenu> {
 	}
-	
+
 	@UiField(provided=true)
 	CoreStyle css = CoreClientBundle.INSTANCE.coreStyle();
 
@@ -59,7 +59,7 @@ public class MainMenu extends Composite {
 
 	private void initialize() {
 
-		org_name.setText("Bike Shoppe #5");
+		org_name.setText("Bike Shop #5");
 
 		org.addPressHandler(new PressHandler() {
 			@Override
