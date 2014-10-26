@@ -136,13 +136,13 @@
 					<disableClassMetadata>true</disableClassMetadata>
           <disableCastChecking>true</disableCastChecking>
 
-          <style>pretty</style>
-<!--      <style>obf</style> -->
+<!--       <style>pretty</style> -->
+     			<style>obf</style>
 
-          <compileReport>false</compileReport>
-          <draftCompile>true</draftCompile>
-          <soycDetailed>false</soycDetailed>
-          <disableRunAsync>true</disableRunAsync>
+          <compileReport>true</compileReport>
+          <draftCompile>false</draftCompile>
+          <soycDetailed>true</soycDetailed>
+          <disableRunAsync>false</disableRunAsync>
 
 
           <extraJvmArgs>-Xmx2048m</extraJvmArgs>

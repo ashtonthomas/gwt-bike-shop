@@ -2,19 +2,19 @@ package com.biker.client.main.activity;
 
 import java.util.logging.Logger;
 
+import com.biker.client.common.activity.ActivityCallbackHandler;
+import com.biker.client.common.activity.AppActivity;
+import com.biker.client.common.activity.AsyncActivityMapper;
+import com.biker.client.common.place.AppPlace;
+import com.biker.client.main.place.AssociatesPlace;
+import com.biker.client.main.place.InventoryPlace;
+import com.biker.client.main.place.ProfilePlace;
+import com.biker.client.main.place.ShopSettingsPlace;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.RunAsyncCallback;
 import com.google.gwt.user.client.Window;
 import com.google.inject.Inject;
 import com.google.inject.assistedinject.Assisted;
-import com.biker.client.common.activity.ActivityCallbackHandler;
-import com.biker.client.common.activity.AppActivity;
-import com.biker.client.common.activity.AsyncActivityMapper;
-import com.biker.client.common.place.AppPlace;
-import com.biker.client.main.place.ShopSettingsPlace;
-import com.biker.client.main.place.AssociatesPlace;
-import com.biker.client.main.place.InventoryPlace;
-import com.biker.client.main.place.ProfilePlace;
 
 @SuppressWarnings("rawtypes")
 public class MainAsyncActivityMapper extends AsyncActivityMapper<AppPlace, AppActivity>{
@@ -41,18 +41,8 @@ public class MainAsyncActivityMapper extends AsyncActivityMapper<AppPlace, AppAc
 		
 		if(place instanceof InventoryPlace){
 			
-			GWT.runAsync(InventoryActivity.class,
-					new RunAsyncCallback() {
-						@Override
-						public void onSuccess() {
-							activityCallbackHandler.onRecieveActivity(
-									factory.messagesActivity((InventoryPlace) place), place);
-						}
-						@Override
-						public void onFailure(Throwable reason) {
-							Window.alert("Failed to load Messages [GWT Async Activity could not be loaded]");
-						}
-					});
+			// This is the root place, so let's not create a split point for it
+			activityCallbackHandler.onRecieveActivity(factory.messagesActivity((InventoryPlace) place), place);
 			
 		}else if(place instanceof AssociatesPlace){
 			
