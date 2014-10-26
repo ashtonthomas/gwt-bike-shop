@@ -1,4 +1,4 @@
-# Bike Shop
+# Bike Shop [![Build Status](https://travis-ci.org/ashtonthomas/bike-shop.svg)](https://travis-ci.org/ashtonthomas/bike-shop)
 
 Welcome to the Bike Shop! This is a GWT sample application. This sample application includes usage for:
 * Super Dev Mode
