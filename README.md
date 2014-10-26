@@ -1,11 +1,13 @@
 # Bike Shop
 
 Welcome to the Bike Shop! This is a GWT sample application. This sample application includes usage for:
+* Super Dev Mode
 * Dynamic Host Pages (Spring & Jsp)
 * Dependency Injection
 * Code Splitting
 * Custom Widgets
 * GssResource and Custom Styles
+* Multiple GWT Modules
 * and much more..
 
 # Fire it up!
@@ -17,7 +19,7 @@ Welcome to the Bike Shop! This is a GWT sample application. This sample applicat
 
 ### Clone the repo
 ```
-git clone [REPLACE WITH GITHUB URL WHEN PUSHED]
+git clone git@github.com:ashtonthomas/bike-shop.git
 cd bike-shop
 ```
 
