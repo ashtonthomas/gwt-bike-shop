@@ -1,6 +1,6 @@
 # Bike Shop [![Build Status](https://travis-ci.org/ashtonthomas/bike-shop.svg)](https://travis-ci.org/ashtonthomas/bike-shop)
 
-Welcome to the Bike Shop! This is a GWT sample application. This sample application includes usage for:
+Welcome to the Bike Shop! This is a GWT sample application demonstrating and [detailing](/docs/how_stuff_works.md) usage for:
 * Super Dev Mode
 * Dynamic Host Pages (Spring & Jsp)
 * Dependency Injection
