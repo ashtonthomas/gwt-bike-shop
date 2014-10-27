@@ -11,3 +11,10 @@ This project demonstrate various GWT features or Gwt-specific techniques and pat
 5. [Responsive layouts](responsiveness.md)
 6. [Gwitting dirty & contributing](contributing.md)
 7. [Dynamic host page](dynamic_host_page.md)
+
+*Things I want to add to this project:*
+* JsInterop / JsType
+* Java 8 Lambdas
+* Polymer / Material Design
+
+Daniel's [awesome slides](http://www.daniel-kurka.de/talks/java_forum_stuttgart_2014/building_for_the_modern_web_with_java.pdf)
