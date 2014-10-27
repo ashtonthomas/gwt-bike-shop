@@ -5,7 +5,6 @@
 </head>
 <body>
 <%@ include file="partials/history.html"%>
-
 </body>
 </html>
 </compress:html>
