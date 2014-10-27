@@ -3,16 +3,7 @@
 	xmlns:g="urn:import:com.google.gwt.user.client.ui"
 	xmlns:fast="urn:import:com.biker.client.common.fast">
 
-	<ui:style type='com.biker.client.common.view.Shell.ShellStyle'>
-		@def PRIMARY_COLOR #35bdda;
-		@def NAV_WIDTH 220px;
-		@def LOGO_HEIGHT 150px;
-
-		@def SIDE_NAV_CONTENT #F1F6FF;
-
-		@def BREAK_MEDIUM 850px;
-		@def BREAK_SMALL 475px;
-
+	<ui:style src='../resource/styles/constants.gss, ../resource/styles/mixins.gss' gss='true'>
 		.wrap {
 			background-color: inherit;
 			height: 100%;
@@ -57,6 +48,11 @@
 			background-color: inherit;
 			height: 100%;
 			position: relative;
+		}
+		
+		.footer {
+			min-height: 100px;
+			@mixin gradient(rgba(201,201,201,0.65), rgba(135,217,255,0.2));
 		}
 	</ui:style>
 
@@ -103,6 +99,10 @@
 				</g:FlowPanel>
 
 				<g:SimplePanel ui:field="content"></g:SimplePanel>
+				
+				<div class="{style.footer}">
+				
+				</div>
 
 			</div>
 		</div>

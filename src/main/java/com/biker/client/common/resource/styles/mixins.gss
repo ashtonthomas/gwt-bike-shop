@@ -1,0 +1,11 @@
+@defmixin gradient(START_COLOR, END_COLOR) {
+  background: linear-gradient(to bottom, START_COLOR 0%, END_COLOR 100%);
+}
+
+@defmixin transform(STATE) {
+  -webkit-transform: STATE;
+  -moz-transform: STATE;
+  -ms-transform: STATE;
+  -o-transform: STATE;
+  transform: STATE;
+}

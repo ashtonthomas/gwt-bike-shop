@@ -21,13 +21,6 @@ public class Shell extends Composite {
 	interface ShellUiBinder extends UiBinder<Widget, Shell> {
 	}
 	
-	interface ShellStyle extends CssResource {
-		
-	}
-	
-	@UiField
-	ShellStyle style;
-	
 	@UiField(provided=true)
 	CoreStyle css = CoreClientBundle.INSTANCE.coreStyle();
 	
