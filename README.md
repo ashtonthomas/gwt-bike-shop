@@ -35,7 +35,7 @@ mvn clean install
 mvn jetty:run
 ```
 
-Now you can go to: `http://localhost:8080/app/`
+Now you can go to: `http://localhost:8080/app/` **don't forget '/app'**
 
 *Your app is now running as normal (non-devmode). You can use the below instructions to set up and launch Super Dev Mode.*
 

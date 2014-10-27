@@ -16,7 +16,8 @@ public class DispatchRoutingHelper {
 		}else if(url.contains("/admin")){
 			return SharedConstants.DISPATCH_CONTEXT_ADMINISTRATOR;
 		}else {
-			throw new RuntimeException("Encountered an invalid destination context in main dispatch. The destination scope did not match any of the valid scopes: "+ url);
+			return SharedConstants.DISPATCH_CONTEXT_MAIN;
+			// throw new RuntimeException("Encountered an invalid destination context in main dispatch. The destination scope did not match any of the valid scopes: "+ url);
 		}
 			
 	}
