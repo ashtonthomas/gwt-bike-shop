@@ -1,4 +1,4 @@
-# Bike Shop [![Build Status](https://travis-ci.org/ashtonthomas/bike-shop.svg)](https://travis-ci.org/ashtonthomas/bike-shop)
+# Bike Shop [![Build Status](https://travis-ci.org/ashtonthomas/gwt-bike-shop.svg?branch=master)](https://travis-ci.org/ashtonthomas/gwt-bike-shop)
 
 https://bike-shop.herokuapp.com/
 
