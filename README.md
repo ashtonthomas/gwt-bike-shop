@@ -1,6 +1,6 @@
 # Bike Shop [![Build Status](https://travis-ci.org/ashtonthomas/bike-shop.svg)](https://travis-ci.org/ashtonthomas/bike-shop)
 
-Welcome to the Bike Shop! This is a GWT sample application demonstrating and [detailing](/wiki/how_stuff_works) usage for:
+Welcome to the Bike Shop! This is a GWT sample application demonstrating and [detailing](https://github.com/ashtonthomas/bike-shop/wiki) usage for:
 * Super Dev Mode
 * Dynamic Host Pages (Spring & Jsp)
 * Dependency Injection
@@ -12,7 +12,7 @@ Welcome to the Bike Shop! This is a GWT sample application demonstrating and [de
 
 ### Extra! Extra! Read all about it!
 
-[How Stuff Works](/wiki/how_stuff_works)
+[How Stuff Works](https://github.com/ashtonthomas/bike-shop/wiki)
 
 # Fire it up!
 
