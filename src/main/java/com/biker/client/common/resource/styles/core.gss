@@ -47,7 +47,7 @@
 
 .header-menu-button {
 	float: left;
-	border-right: 1px solid #92B2E5;
+	border-right: 1px solid #72BDD3;
 	padding: 0px 15px 0 12px;
 }
 
@@ -159,7 +159,7 @@
 		-webkit-border-radius: 0;
 		-moz-border-radius: 0;
 		border-radius: 0;
-		border-left: 1px solid #92B2E5;
+		border-left: 1px solid #72BDD3;
 	}
 	.nav-items a {
 		color: #FFF;

@@ -5,10 +5,9 @@
 		.wrap {
 			border: 1px solid #CCC;
 			min-height: 50px;
-			margin: 5px;
+			margin: 15px 15px 20px;
 			color: #666;
-			margin-bottom: 20px;
-			box-shadow: 1px 2px 9px #C8C8C8;
+			 box-shado: 1px 2px 2px #E7E7E7;
 		}
 		
 		.header {
@@ -20,6 +19,7 @@
 		.headerName {
 			border-right: 1px solid #CCC;
 			margin-right: 100px;
+			padding: 5px;
 		}
 		
 		.headerEditWrap {
@@ -44,12 +44,9 @@
  			@mixin transform(translate(-50%, -50%));
 		}
 
-		
-		
 		.body {
 			padding: 10px;
 		}
-		
 		
 	</ui:style>
 	
@@ -67,7 +64,7 @@
 			</div>
 		</div>
 		<div class="{style.body}">
-			Hey, We're working hereeaaaaaa!
+			-
 		</div>
 	</g:HTMLPanel>
 </ui:UiBinder> 

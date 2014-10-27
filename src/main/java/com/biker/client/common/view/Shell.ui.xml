@@ -50,10 +50,6 @@
 			position: relative;
 		}
 		
-		.footer {
-			min-height: 100px;
-			@mixin gradient(rgba(201,201,201,0.65), rgba(135,217,255,0.2));
-		}
 	</ui:style>
 
 	<ui:with field="css" type="com.biker.client.common.resource.CoreStyle"></ui:with>
@@ -100,10 +96,6 @@
 
 				<g:SimplePanel ui:field="content"></g:SimplePanel>
 				
-				<div class="{style.footer}">
-				
-				</div>
-
 			</div>
 		</div>
 
