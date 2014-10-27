@@ -2,7 +2,7 @@
 
 https://bike-shop.herokuapp.com/
 
-Welcome to the Bike Shop! This is a GWT sample application demonstrating and [detailing](https://github.com/ashtonthomas/bike-shop/wiki) usage for:
+Welcome to the Bike Shop! This is a GWT sample application demonstrating and [detailing](https://github.com/ashtonthomas/gwt-bike-shop/wiki) usage for:
 * Super Dev Mode
 * Dynamic Host Pages (Spring & Jsp)
 * Dependency Injection
@@ -14,7 +14,7 @@ Welcome to the Bike Shop! This is a GWT sample application demonstrating and [de
 
 ### Extra! Extra! Read all about it!
 
-[How Stuff Works](https://github.com/ashtonthomas/bike-shop/wiki)
+[How Stuff Works](https://github.com/ashtonthomas/gwt-bike-shop/wiki)
 
 # Fire it up!
 
@@ -25,8 +25,8 @@ Welcome to the Bike Shop! This is a GWT sample application demonstrating and [de
 
 ### Clone the repo
 ```
-git clone git@github.com:ashtonthomas/bike-shop.git
-cd bike-shop
+git clone git@github.com:ashtonthomas/gwt-bike-shop.git
+cd gwt-bike-shop
 ```
 
 ### Build and Run w/ Jetty
