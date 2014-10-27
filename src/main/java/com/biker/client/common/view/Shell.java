@@ -4,6 +4,7 @@ import com.biker.client.common.fast.FastPress;
 import com.biker.client.common.resource.CoreClientBundle;
 import com.biker.client.common.resource.CoreStyle;
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.resources.client.CssResource;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Composite;
@@ -19,6 +20,13 @@ public class Shell extends Composite {
 
 	interface ShellUiBinder extends UiBinder<Widget, Shell> {
 	}
+	
+	interface ShellStyle extends CssResource {
+		
+	}
+	
+	@UiField
+	ShellStyle style;
 	
 	@UiField(provided=true)
 	CoreStyle css = CoreClientBundle.INSTANCE.coreStyle();

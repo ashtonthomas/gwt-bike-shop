@@ -3,7 +3,7 @@
 	xmlns:g="urn:import:com.google.gwt.user.client.ui"
 	xmlns:fast="urn:import:com.biker.client.common.fast">
 
-	<ui:style>
+	<ui:style type='com.biker.client.common.view.Shell.ShellStyle'>
 		@def PRIMARY_COLOR #35bdda;
 		@def NAV_WIDTH 220px;
 		@def LOGO_HEIGHT 150px;
