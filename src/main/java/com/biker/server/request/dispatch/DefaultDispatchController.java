@@ -44,6 +44,10 @@ public class DefaultDispatchController implements Controller {
 		// -- Before doing anything, we verify HTTPS
 
 		boolean usingHttps = url != null && url.contains("https://");
+		
+		// I want to deploy on heroku for now
+		// without having ssl
+		usingHttps = true;
 
 		boolean isDevMode = request.getQueryString() != null
 				&& request.getQueryString().contains(
