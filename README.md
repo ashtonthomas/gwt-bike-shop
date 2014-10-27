@@ -1,5 +1,7 @@
 # Bike Shop [![Build Status](https://travis-ci.org/ashtonthomas/bike-shop.svg)](https://travis-ci.org/ashtonthomas/bike-shop)
 
+https://bike-shop.herokuapp.com/
+
 Welcome to the Bike Shop! This is a GWT sample application demonstrating and [detailing](https://github.com/ashtonthomas/bike-shop/wiki) usage for:
 * Super Dev Mode
 * Dynamic Host Pages (Spring & Jsp)
