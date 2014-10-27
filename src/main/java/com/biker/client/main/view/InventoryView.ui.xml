@@ -2,25 +2,9 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
-		.box {
-			border: 1px solid #CCC;
-			min-height: 50px;
-			margin: 5px;
-			color: #666;
-			padding: 15px;
-		}
+		
 	</ui:style>
 	<g:HTMLPanel>
-		<div class="{style.box}">
-			Bike
-		</div>
-		
-		<div class="{style.box}">
-			Bike
-		</div>
-		
-		<div class="{style.box}">
-			Bike
-		</div>
+		<g:FlowPanel ui:field="bikeList"></g:FlowPanel>
 	</g:HTMLPanel>
 </ui:UiBinder> 

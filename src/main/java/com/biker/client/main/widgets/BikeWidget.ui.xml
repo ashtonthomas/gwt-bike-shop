@@ -1,0 +1,60 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.wrap {
+			border: 1px solid #CCC;
+			min-height: 50px;
+			margin: 5px;
+			color: #666;
+			margin-bottom: 20px;
+			box-shadow: 1px 2px 9px #C8C8C8;
+		}
+		
+		.header {
+			border-bottom: 1px solid #CCC;
+			position: relative;
+		}
+		
+		.headerName {
+			border-right: 1px solid #CCC;
+			margin-right: 100px;
+			padding: 10px;
+		}
+		
+		.headerEdit {
+			width: 100px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			text-align: center;
+			cursor: pointer;
+		}
+
+		.headerEdit:hover {
+			background-color: #CCC;
+		}
+		
+		.body {
+			padding: 10px;
+		}
+		
+		
+	</ui:style>
+	
+	<ui:with field="css" type="com.biker.client.common.resource.CoreStyle"></ui:with>
+	
+	<g:HTMLPanel styleName="{style.wrap}">
+		<div class="{style.header}">
+			<div class="{style.headerName}">
+				Da Bike
+			</div>
+			<div class="{style.headerEdit}">
+				<i class="fa fa-edit"></i>
+			</div>
+		</div>
+		<div class="{style.body}">
+			Hey, We're working hereeaaaaaa!
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

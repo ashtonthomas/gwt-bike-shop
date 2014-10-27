@@ -2,9 +2,13 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
-	
+		.content {
+			margin: 10px;
+			border: 1px solid #CCC;
+			padding: 15px;
+		}
 	</ui:style>
-	<g:HTMLPanel>
+	<g:HTMLPanel styleName="{style.content}">
 		SHOP SETTINGS VIEW
 	</g:HTMLPanel>
 </ui:UiBinder> 
