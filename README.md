@@ -12,7 +12,7 @@ Welcome to the Bike Shop! This is a GWT sample application demonstrating and [de
 
 ### Extra! Extra! Read all about it!
 
-[How Stuff Works](/docs/how_stuff_works.md)
+[How Stuff Works](/wiki/how_stuff_works.md)
 
 # Fire it up!
 
