@@ -7,12 +7,12 @@
 			min-height: 50px;
 			margin: 15px 15px 20px;
 			color: #666;
-			 box-shado: 1px 2px 2px #E7E7E7;
+			 box-shadow: 1px 2px 2px #E7E7E7;
 		}
 		
 		.header {
-			border-bottom: 1px solid #CCC;
 			position: relative;
+			border-bottom: 1px solid #CCC;
 			min-height: 25px;
 		}
 		
@@ -23,7 +23,6 @@
 		}
 		
 		.headerEditWrap {
-			display: none;
 			width: 100px;
 			margin: auto;
 			height: 100%;
@@ -54,13 +53,13 @@
 	
 	<g:HTMLPanel styleName="{style.wrap}">
 		<div class="{style.header}">
-			<div class="{style.headerName}">
-				Da Bike
-			</div>
 			<div class="{style.headerEditWrap}">
 				<div class="{style.headerEdit}">
 					<i class="fa fa-edit"></i>
 				</div>
+			</div>
+			<div class="{style.headerName}">
+				Da Bike
 			</div>
 		</div>
 		<div class="{style.body}">

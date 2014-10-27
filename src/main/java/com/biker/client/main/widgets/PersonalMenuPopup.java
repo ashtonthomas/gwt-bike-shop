@@ -17,7 +17,7 @@ public class PersonalMenuPopup extends SimplePopup {
 	
 	@Inject
 	public PersonalMenuPopup(PersonalMenu menu, EventBus eventBus) {
-		super(true, false);
+		super(true);
 		this.menu = menu;
 		this.eventBus = eventBus;
 		initialize();

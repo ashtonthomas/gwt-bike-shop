@@ -13,7 +13,7 @@
 }
 
 .pseudoPopupGlass {
-	gwt-image: "trnp25";
+	display: none;
 }
 
 @media screen and (min-width: 600px) {
