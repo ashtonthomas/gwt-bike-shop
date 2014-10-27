@@ -10,7 +10,7 @@ Welcome to the Bike Shop! This is a GWT sample application. This sample applicat
 * Multiple GWT Modules
 * and much more..
 
-## Extra! Extra! Read all about it!
+### Extra! Extra! Read all about it!
 
 [How Stuff Works](/docs/how_stuff_works.md)
 

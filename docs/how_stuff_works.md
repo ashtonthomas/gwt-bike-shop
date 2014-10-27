@@ -10,3 +10,4 @@ This project demonstrate various GWT features or Gwt-specific techniques and pat
 4. [Code splitting & stuff](code_splitting.md)
 5. [Responsive layouts](responsiveness.md)
 6. [Gwitting dirty & contributing](contributing.md)
+7. [Dynamic host page](dynamic_host_page.md)
