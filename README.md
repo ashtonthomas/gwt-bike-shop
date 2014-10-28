@@ -11,7 +11,7 @@ Welcome to the Bike Shop! This is a GWT sample application demonstrating and [de
 * GssResource and Custom Styles
 * Multiple GWT Modules
 * and much more..
-* 
+
 
 **If you want to see some usage with an explanation, please [open an issue](https://github.com/ashtonthomas/gwt-bike-shop/issues)**
 
