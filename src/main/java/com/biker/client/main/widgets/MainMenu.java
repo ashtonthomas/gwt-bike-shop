@@ -34,10 +34,10 @@ public class MainMenu extends Composite {
 	CoreStyle css = CoreClientBundle.INSTANCE.coreStyle();
 
 	@UiField
-	FastPress org;
+	FastPress store;
 
 	@UiField
-	InlineLabel org_name;
+	InlineLabel shop_name;
 
 	@UiField
 	FastPress inventory;
@@ -59,9 +59,9 @@ public class MainMenu extends Composite {
 
 	private void initialize() {
 
-		org_name.setText("Bike Shop #5");
+		shop_name.setText("Bike Shop #5");
 
-		org.addPressHandler(new PressHandler() {
+		store.addPressHandler(new PressHandler() {
 			@Override
 			public void onPress(PressEvent event) {
 				// We will remove this

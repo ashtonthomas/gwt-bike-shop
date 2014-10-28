@@ -31,8 +31,8 @@ public interface CoreStyle extends CssResource {
 	@ClassName("nav-hide")
 	String navHide();
 	
-	@ClassName("shop-context-click")
-	String shopContextClick();
+	@ClassName("menu-button-click")
+	String menuButtonClick();
 	
 	@ClassName("nav-items")
 	String navItems();
@@ -40,8 +40,8 @@ public interface CoreStyle extends CssResource {
 	@ClassName("shop-chevron")
 	String shopChevron();
 	
-	@ClassName("shop-context")
-	String shopContext();
+	@ClassName("menu-button")
+	String menuButton();
 	
 	@ClassName("header-info-button-chevron")
 	String headerInfoButtonChevron();

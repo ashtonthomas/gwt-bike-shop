@@ -83,7 +83,7 @@
 	background-color: #5894D5;
 }
 
-.shop-context {
+.menu-button {
 	padding: 18px;
 	position: relative;
 	color: #777777;
@@ -93,18 +93,18 @@
 	display:none;
 }
 
-.shop-context-click .shop-chevron {
+.menu-button-click .shop-chevron {
 	display: inline;
 	position: absolute;
 	top: 21px;
 	right: 18px;
 }
 
-.shop-context-click {
+.menu-button-click {
 	cursor: pointer;
 }
 
-.shop-context-click:hover {
+.menu-button-click:hover {
 	background-color: rgb(223, 233, 255);
 }
 
@@ -167,12 +167,12 @@
 		color: #FFF;
 		background-color: #75A1E7;
 	}
-	.shop-context {
+	.menu-button {
 		color: #FFF;
 		border-bottom: 1px solid #A0D6DD;
 		background-color: #35bdda;
 	}
-	.shop-context-click:hover {
+	.menu-button-click:hover {
 		background-color: #5B93D0;
 	}
 }
@@ -184,7 +184,7 @@
 	.header-mobile-nav {
 		display: none;
 	}
-	.shop-context {
+	.menu-button {
 		background-color: #FFF;
 	}
 }

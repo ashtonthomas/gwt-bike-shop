@@ -15,7 +15,7 @@
 					<ul class="nomargin {css.navItems}">
 						<li>
 							<fast:FastPress ui:field="settings"
-								styleName="nomargin {css.shopContext} {css.shopContextClick}">
+								styleName="nomargin {css.menuButton} {css.menuButtonClick}">
 								<fast:inner>
 									<g:HTMLPanel>
 										<i class="fa fa-user"></i>
@@ -26,7 +26,7 @@
 						</li>
 						<li>
 							<fast:FastPress ui:field="logout"
-								styleName="nomargin {css.shopContext} {css.shopContextClick}">
+								styleName="nomargin {css.menuButton} {css.menuButtonClick}">
 								<fast:inner>
 									<g:HTMLPanel>
 										<i class="fa fa-sign-out"></i>
