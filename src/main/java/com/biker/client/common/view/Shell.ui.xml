@@ -16,6 +16,12 @@
 			overflow: hidden;
 			height: 0;
 		}
+		
+		@media screen and (max-width: 900px) {
+			.nav {
+				display: none;
+			}
+		}
 
 		.logo {
 			width: NAV_WIDTH;

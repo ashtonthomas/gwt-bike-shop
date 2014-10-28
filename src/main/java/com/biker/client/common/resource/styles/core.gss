@@ -67,8 +67,6 @@
 	width: auto;
 	background-color: #fff;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	height: inherit;
-	position: relative;
 	padding: 0;
 }
 
