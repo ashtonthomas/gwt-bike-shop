@@ -73,7 +73,8 @@
 .header {
 	position: relative;
 	line-height: 50px;
-	padding: 5px;
+	padding: 10px;
+	border-bottom: 1px solid #E8E8E8;
 }
 
 .header-mobile-nav {
