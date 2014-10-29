@@ -5,9 +5,9 @@ import com.google.gwt.user.client.Window;
 
 public class LoginApplication implements EntryPoint {
 
-	@Override
-	public void onModuleLoad() {
-		Window.alert("Login GWT App Loaded");
-	}
-	
+  @Override
+  public void onModuleLoad() {
+    Window.alert("Login GWT App Loaded");
+  }
+
 }

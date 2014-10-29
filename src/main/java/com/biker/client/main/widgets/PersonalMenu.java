@@ -20,38 +20,37 @@ import com.google.inject.Inject;
 
 public class PersonalMenu extends Composite {
 
-	private static PersonalMenuUiBinder uiBinder = GWT
-			.create(PersonalMenuUiBinder.class);
+  private static PersonalMenuUiBinder uiBinder = GWT.create(PersonalMenuUiBinder.class);
 
-	interface PersonalMenuUiBinder extends UiBinder<Widget, PersonalMenu> {
-	}
+  interface PersonalMenuUiBinder extends UiBinder<Widget, PersonalMenu> {
+  }
 
-	@UiField(provided=true)
-	CoreStyle css = CoreClientBundle.INSTANCE.coreStyle();
-	
-	@UiField
-	FastPress settings;
-	
-	@UiField
-	FastPress logout;
-	
-	private final EventBus eventBus;
-	
-	@Inject
-	public PersonalMenu(EventBus eventBus) {
-		initWidget(uiBinder.createAndBindUi(this));
-		this.eventBus = eventBus;
-		initialize();
-	}
-	
-	private void initialize(){
-		logout.addPressHandler(new PressHandler() {
-			@Override
-			public void onPress(PressEvent event) {
-				eventBus.fireEvent(new LogoutEvent());
-				eventBus.fireEvent(new ShowMenuEvent(ShowMenuEventType.HIDE));
-			}
-		});
-	}
+  @UiField(provided = true)
+  CoreStyle css = CoreClientBundle.INSTANCE.coreStyle();
+
+  @UiField
+  FastPress settings;
+
+  @UiField
+  FastPress logout;
+
+  private final EventBus eventBus;
+
+  @Inject
+  public PersonalMenu(EventBus eventBus) {
+    initWidget(uiBinder.createAndBindUi(this));
+    this.eventBus = eventBus;
+    initialize();
+  }
+
+  private void initialize() {
+    logout.addPressHandler(new PressHandler() {
+      @Override
+      public void onPress(PressEvent event) {
+        eventBus.fireEvent(new LogoutEvent());
+        eventBus.fireEvent(new ShowMenuEvent(ShowMenuEventType.HIDE));
+      }
+    });
+  }
 
 }

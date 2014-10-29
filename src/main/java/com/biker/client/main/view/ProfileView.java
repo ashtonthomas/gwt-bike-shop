@@ -9,21 +9,20 @@ import com.biker.client.main.activity.ProfileActivity.ProfileViewI;
 
 public class ProfileView extends Composite implements ProfileViewI {
 
-	private static ProfileViewUiBinder uiBinder = GWT
-			.create(ProfileViewUiBinder.class);
+  private static ProfileViewUiBinder uiBinder = GWT.create(ProfileViewUiBinder.class);
 
-	interface ProfileViewUiBinder extends UiBinder<Widget, ProfileView> {
-	}
+  interface ProfileViewUiBinder extends UiBinder<Widget, ProfileView> {
+  }
 
-	private ProfileActivity presenter;
-	
-	public ProfileView() {
-		initWidget(uiBinder.createAndBindUi(this));
-	}
+  private ProfileActivity presenter;
 
-	@Override
-	public void setPresenter(ProfileActivity presenter) {
-		this.presenter = presenter;
-	}
+  public ProfileView() {
+    initWidget(uiBinder.createAndBindUi(this));
+  }
+
+  @Override
+  public void setPresenter(ProfileActivity presenter) {
+    this.presenter = presenter;
+  }
 
 }

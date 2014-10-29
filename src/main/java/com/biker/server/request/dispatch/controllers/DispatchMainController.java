@@ -16,30 +16,30 @@ import com.biker.shared.constants.SharedConstants;
 import com.biker.shared.dto.DataConfigDto;
 
 @Component
-public class DispatchMainController implements Controller{
-	
-	@Autowired
-	private DispatchDataHelper dispatchDataHelper;
+public class DispatchMainController implements Controller {
 
-	@Override
-	public ModelAndView handleRequest(HttpServletRequest request,
-			HttpServletResponse response) throws Exception {
+  @Autowired
+  private DispatchDataHelper dispatchDataHelper;
 
-		return assembleMain(request);
-		
-	}
-	
-	private ModelAndView assembleMain(HttpServletRequest request){
-		
-		JspConfig config = new JspConfig();
-		
-		DataConfigDto dataConfig = DispatchRoutingHelper.getDataConfig(request);
-		
-		config.setAppTitle("Biker - Bike Shop Management");
-		config.setJspView(SharedConstants.JSP_VIEW_MAIN);
-		config.setGwtModule(SharedConstants.GWT_MODULE_MAIN);
-		
-		return JspAssembler.assembleHostJsp(config);
-	}
+  @Override
+  public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response)
+      throws Exception {
+
+    return assembleMain(request);
+
+  }
+
+  private ModelAndView assembleMain(HttpServletRequest request) {
+
+    JspConfig config = new JspConfig();
+
+    DataConfigDto dataConfig = DispatchRoutingHelper.getDataConfig(request);
+
+    config.setAppTitle("Biker - Bike Shop Management");
+    config.setJspView(SharedConstants.JSP_VIEW_MAIN);
+    config.setGwtModule(SharedConstants.GWT_MODULE_MAIN);
+
+    return JspAssembler.assembleHostJsp(config);
+  }
 
 }

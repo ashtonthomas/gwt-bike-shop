@@ -12,29 +12,28 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class InventoryView extends Composite implements InventoryViewI {
 
-	private static InventoryViewUiBinder uiBinder = GWT
-			.create(InventoryViewUiBinder.class);
+  private static InventoryViewUiBinder uiBinder = GWT.create(InventoryViewUiBinder.class);
 
-	interface InventoryViewUiBinder extends UiBinder<Widget, InventoryView> {
-	}
-	
-	@UiField
-	FlowPanel bikeList;
-	
-	private InventoryActivity presenter;
+  interface InventoryViewUiBinder extends UiBinder<Widget, InventoryView> {
+  }
 
-	public InventoryView() {
-		initWidget(uiBinder.createAndBindUi(this));
-	}
+  @UiField
+  FlowPanel bikeList;
 
-	@Override
-	public void setPresenter(InventoryActivity presenter) {
-		this.presenter = presenter;
-	}
+  private InventoryActivity presenter;
 
-	@Override
-	public void addBike(IsWidget bikeWidget) {
-		bikeList.add(bikeWidget);
-	}
+  public InventoryView() {
+    initWidget(uiBinder.createAndBindUi(this));
+  }
+
+  @Override
+  public void setPresenter(InventoryActivity presenter) {
+    this.presenter = presenter;
+  }
+
+  @Override
+  public void addBike(IsWidget bikeWidget) {
+    bikeList.add(bikeWidget);
+  }
 
 }

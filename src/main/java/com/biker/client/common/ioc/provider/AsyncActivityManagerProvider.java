@@ -6,20 +6,20 @@ import com.google.inject.Provider;
 import com.biker.client.common.activity.AsyncActivityManager;
 import com.biker.client.common.activity.AsyncActivityMapper;
 
-public class AsyncActivityManagerProvider implements Provider<AsyncActivityManager>{
-	
-	private final AsyncActivityMapper activityMapper;
-	private final EventBus eventBus;
+public class AsyncActivityManagerProvider implements Provider<AsyncActivityManager> {
 
-	@Inject
-	public AsyncActivityManagerProvider(EventBus eventBus, AsyncActivityMapper activityMapper){
-		this.eventBus = eventBus;
-		this.activityMapper = activityMapper;
-	}
-	
-	@Override
-	public AsyncActivityManager get() {
-		return new AsyncActivityManager(eventBus, activityMapper);
-	}
+  private final AsyncActivityMapper activityMapper;
+  private final EventBus eventBus;
+
+  @Inject
+  public AsyncActivityManagerProvider(EventBus eventBus, AsyncActivityMapper activityMapper) {
+    this.eventBus = eventBus;
+    this.activityMapper = activityMapper;
+  }
+
+  @Override
+  public AsyncActivityManager get() {
+    return new AsyncActivityManager(eventBus, activityMapper);
+  }
 
 }

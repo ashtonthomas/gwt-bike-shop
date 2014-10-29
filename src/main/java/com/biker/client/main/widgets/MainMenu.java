@@ -21,75 +21,73 @@ import com.google.inject.Inject;
 
 public class MainMenu extends Composite {
 
-	final static private Logger log = Logger
-			.getLogger(MainMenu.class.getName());
+  final static private Logger log = Logger.getLogger(MainMenu.class.getName());
 
-	private static MainMenuUiBinder uiBinder = GWT
-			.create(MainMenuUiBinder.class);
+  private static MainMenuUiBinder uiBinder = GWT.create(MainMenuUiBinder.class);
 
-	interface MainMenuUiBinder extends UiBinder<Widget, MainMenu> {
-	}
+  interface MainMenuUiBinder extends UiBinder<Widget, MainMenu> {
+  }
 
-	@UiField(provided=true)
-	CoreStyle css = CoreClientBundle.INSTANCE.coreStyle();
+  @UiField(provided = true)
+  CoreStyle css = CoreClientBundle.INSTANCE.coreStyle();
 
-	@UiField
-	FastPress store;
+  @UiField
+  FastPress store;
 
-	@UiField
-	InlineLabel shop_name;
+  @UiField
+  InlineLabel shop_name;
 
-	@UiField
-	FastPress inventory;
+  @UiField
+  FastPress inventory;
 
-	@UiField
-	FastPress associates;
+  @UiField
+  FastPress associates;
 
-	@UiField
-	FastPress shopSettings;
+  @UiField
+  FastPress shopSettings;
 
-	private final PlaceController placeController;
+  private final PlaceController placeController;
 
-	@Inject
-	public MainMenu(PlaceController placeController) {
-		initWidget(uiBinder.createAndBindUi(this));
-		this.placeController = placeController;
-		initialize();
-	}
+  @Inject
+  public MainMenu(PlaceController placeController) {
+    initWidget(uiBinder.createAndBindUi(this));
+    this.placeController = placeController;
+    initialize();
+  }
 
-	private void initialize() {
+  private void initialize() {
 
-		shop_name.setText("Bike Shop #5");
+    shop_name.setText("Bike Shop #5");
 
-		store.addPressHandler(new PressHandler() {
-			@Override
-			public void onPress(PressEvent event) {
-				// We will remove this
-				// Changing org context is out of scope for the MVP
-				// Window.alert("Org Context Button Clicked");
-			}
-		});
+    store.addPressHandler(new PressHandler() {
+      @Override
+      public void onPress(PressEvent event) {
+        // We will remove this
+        // Changing org context is out of scope for the MVP
+        // Window.alert("Org Context Button Clicked");
+      }
+    });
 
-		inventory.addPressHandler(new PressHandler() {
-			@Override
-			public void onPress(PressEvent event) {
-				placeController.goTo(new InventoryPlace());
-			}
-		});
+    inventory.addPressHandler(new PressHandler() {
+      @Override
+      public void onPress(PressEvent event) {
+        placeController.goTo(new InventoryPlace());
+      }
+    });
 
-		associates.addPressHandler(new PressHandler() {
-			@Override
-			public void onPress(PressEvent event) {
-				placeController.goTo(new AssociatesPlace());
-			}
-		});
+    associates.addPressHandler(new PressHandler() {
+      @Override
+      public void onPress(PressEvent event) {
+        placeController.goTo(new AssociatesPlace());
+      }
+    });
 
-		shopSettings.addPressHandler(new PressHandler() {
-			@Override
-			public void onPress(PressEvent event) {
-				placeController.goTo(new ShopSettingsPlace());
-			}
-		});
-	}
+    shopSettings.addPressHandler(new PressHandler() {
+      @Override
+      public void onPress(PressEvent event) {
+        placeController.goTo(new ShopSettingsPlace());
+      }
+    });
+  }
 
 }

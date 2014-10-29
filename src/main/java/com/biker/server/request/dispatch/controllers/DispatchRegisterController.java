@@ -10,12 +10,12 @@ import org.springframework.web.servlet.mvc.Controller;
 @Component
 public class DispatchRegisterController implements Controller {
 
-	@Override
-	public ModelAndView handleRequest(HttpServletRequest request,
-			HttpServletResponse response) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
+  @Override
+  public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response)
+      throws Exception {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
 
 }

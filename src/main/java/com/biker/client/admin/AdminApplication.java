@@ -5,9 +5,9 @@ import com.google.gwt.user.client.Window;
 
 public class AdminApplication implements EntryPoint {
 
-	@Override
-	public void onModuleLoad() {
-		Window.alert("Admin GWT App Loaded");
-	}
-	
+  @Override
+  public void onModuleLoad() {
+    Window.alert("Admin GWT App Loaded");
+  }
+
 }

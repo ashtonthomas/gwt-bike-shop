@@ -22,23 +22,24 @@ import com.google.inject.Singleton;
 
 public class MainInjectorModule extends CommonInjectorModule {
 
-	@Override
-	protected void configureModule() {
-		bind(MainPlaceHistoryMapper.class).in(Singleton.class);
-		bind(PlaceHistoryHandler.class).toProvider(MainPlaceHistoryHandlerProvider.class).in(Singleton.class);
-		bind(AsyncActivityMapper.class).to(MainAsyncActivityMapper.class).in(Singleton.class);
-		
-		bind(MenuManager.class).in(Singleton.class);
-		bind(PersonalMenuPopup.class).in(Singleton.class);
-		
-		bind(InventoryViewI.class).to(InventoryView.class);
-		bind(AssociatesViewI.class).to(AssociatesView.class);
-		bind(ShopSettingsViewI.class).to(ShopSettingsView.class);
-		bind(ProfileViewI.class).to(ProfileView.class);
-		
-		install(new GinFactoryModuleBuilder().build(MainActivityFactory.class));
-		install(new GinFactoryModuleBuilder().build(MainWidgetFactory.class));
-		install(new GinFactoryModuleBuilder().build(MiscFactory.class));
-	}
+  @Override
+  protected void configureModule() {
+    bind(MainPlaceHistoryMapper.class).in(Singleton.class);
+    bind(PlaceHistoryHandler.class).toProvider(MainPlaceHistoryHandlerProvider.class).in(
+        Singleton.class);
+    bind(AsyncActivityMapper.class).to(MainAsyncActivityMapper.class).in(Singleton.class);
+
+    bind(MenuManager.class).in(Singleton.class);
+    bind(PersonalMenuPopup.class).in(Singleton.class);
+
+    bind(InventoryViewI.class).to(InventoryView.class);
+    bind(AssociatesViewI.class).to(AssociatesView.class);
+    bind(ShopSettingsViewI.class).to(ShopSettingsView.class);
+    bind(ProfileViewI.class).to(ProfileView.class);
+
+    install(new GinFactoryModuleBuilder().build(MainActivityFactory.class));
+    install(new GinFactoryModuleBuilder().build(MainWidgetFactory.class));
+    install(new GinFactoryModuleBuilder().build(MiscFactory.class));
+  }
 
 }

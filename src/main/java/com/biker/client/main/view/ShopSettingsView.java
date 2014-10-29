@@ -9,21 +9,20 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class ShopSettingsView extends Composite implements ShopSettingsViewI {
 
-	private static ShopSettingsViewUiBinder uiBinder = GWT
-			.create(ShopSettingsViewUiBinder.class);
+  private static ShopSettingsViewUiBinder uiBinder = GWT.create(ShopSettingsViewUiBinder.class);
 
-	interface ShopSettingsViewUiBinder extends UiBinder<Widget, ShopSettingsView> {
-	}
+  interface ShopSettingsViewUiBinder extends UiBinder<Widget, ShopSettingsView> {
+  }
 
-	private ShopSettingsActivity presenter;
-	
-	public ShopSettingsView() {
-		initWidget(uiBinder.createAndBindUi(this));
-	}
+  private ShopSettingsActivity presenter;
 
-	@Override
-	public void setPresenter(ShopSettingsActivity presenter) {
-		this.presenter = presenter;
-	}
+  public ShopSettingsView() {
+    initWidget(uiBinder.createAndBindUi(this));
+  }
+
+  @Override
+  public void setPresenter(ShopSettingsActivity presenter) {
+    this.presenter = presenter;
+  }
 
 }

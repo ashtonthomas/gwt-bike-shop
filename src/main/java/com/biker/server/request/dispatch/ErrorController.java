@@ -40,12 +40,19 @@ public class ErrorController implements Controller {
     // log.info( "serverName={}, serverPort={}, scheme={}, built url={}.", serverName, serverPort,
     // scheme, url );
 
-    log.info(
-        "Error={} loading requested URL=\"{}\", query string=\"{}\", path info=\"{}\", appUrl=\"{}\"."+"--"+
-        statusCode+"--"+ originalUri+"--"+ originalQueryString+"--"+originalPathInfo+"--"+ url);
+    log.info("Error={} loading requested URL=\"{}\", query string=\"{}\", path info=\"{}\", appUrl=\"{}\"."
+        + "--"
+        + statusCode
+        + "--"
+        + originalUri
+        + "--"
+        + originalQueryString
+        + "--"
+        + originalPathInfo + "--" + url);
 
     ModelAndView mav = new ModelAndView("error"); // Will render error.jsp.
-    mav.addObject("appUrl", url); // This will just be a path ("/${moduleNameLower}/"); the browser will fill
+    mav.addObject("appUrl", url); // This will just be a path ("/${moduleNameLower}/"); the browser
+                                  // will fill
                                   // the scheme, host, port.
     mav.addObject("statusCode", statusCode);
 

@@ -9,21 +9,20 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class AssociatesView extends Composite implements AssociatesViewI {
 
-	private static AssociatesViewUiBinder uiBinder = GWT
-			.create(AssociatesViewUiBinder.class);
+  private static AssociatesViewUiBinder uiBinder = GWT.create(AssociatesViewUiBinder.class);
 
-	interface AssociatesViewUiBinder extends UiBinder<Widget, AssociatesView> {
-	}
-	
-	private AssociatesActivity presenter;
+  interface AssociatesViewUiBinder extends UiBinder<Widget, AssociatesView> {
+  }
 
-	public AssociatesView() {
-		initWidget(uiBinder.createAndBindUi(this));
-	}
+  private AssociatesActivity presenter;
 
-	@Override
-	public void setPresenter(AssociatesActivity presenter) {
-		this.presenter = presenter;
-	}
+  public AssociatesView() {
+    initWidget(uiBinder.createAndBindUi(this));
+  }
+
+  @Override
+  public void setPresenter(AssociatesActivity presenter) {
+    this.presenter = presenter;
+  }
 
 }

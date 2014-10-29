@@ -6,13 +6,13 @@ import com.google.gwt.user.client.Command;
 
 public class Butter {
 
-	public static void go(final Command command){
-		Scheduler.get().scheduleDeferred(new ScheduledCommand() {
-			@Override
-			public void execute() {
-				command.execute();
-			}
-		});
-	}
-	
+  public static void go(final Command command) {
+    Scheduler.get().scheduleDeferred(new ScheduledCommand() {
+      @Override
+      public void execute() {
+        command.execute();
+      }
+    });
+  }
+
 }

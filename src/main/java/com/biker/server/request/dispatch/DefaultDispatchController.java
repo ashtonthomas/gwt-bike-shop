@@ -19,73 +19,72 @@ import com.biker.shared.constants.SharedConstants;
 @Component
 public class DefaultDispatchController implements Controller {
 
-	@Autowired
-	private DispatchRegisterController dispatchRegistration;
-	
-	@Autowired
-	private DispatchMainController dispatchMain;
-	
-	@Autowired
-	private DispatchAdminController dispatchAdmin;
-	
-	Logger log = Logger.getLogger("my.logger");
-	
-	@Override
-	public ModelAndView handleRequest(HttpServletRequest request,
-			HttpServletResponse response) throws Exception {
-		
-		log.log(Level.ALL, "handleRequest: "+request);
-		
-		// Set Thread Locals
-		GwtRpcDispatcherUtil.setThreadLocals(request, response);
+  @Autowired
+  private DispatchRegisterController dispatchRegistration;
 
-		String url = request.getRequestURL().toString();
+  @Autowired
+  private DispatchMainController dispatchMain;
 
-		// -- Before doing anything, we verify HTTPS
+  @Autowired
+  private DispatchAdminController dispatchAdmin;
 
-		boolean usingHttps = url != null && url.contains("https://");
-		
-		// I want to deploy on heroku for now
-		// without having ssl
-		usingHttps = true;
+  Logger log = Logger.getLogger("my.logger");
 
-		boolean isDevMode = request.getQueryString() != null
-				&& request.getQueryString().contains(
-						SharedConstants.DEV_MODE_QUERY_STRING);
+  @Override
+  public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response)
+      throws Exception {
 
-		boolean isByPass = request.getQueryString() != null
-				&& request.getQueryString().contains("nohttpstest");
+    log.log(Level.ALL, "handleRequest: " + request);
 
-		boolean allowRedirect = Boolean.parseBoolean(System.getProperty(
-				"allowRedirect", "" + true));
+    // Set Thread Locals
+    GwtRpcDispatcherUtil.setThreadLocals(request, response);
 
-		// Before doing anything, verify we are on https
-		if (!usingHttps && !isDevMode && !isByPass && allowRedirect) {
-			// TODO log.info("Encountered a nonDevMode NOT using HTTPS - redirect");
-			response.sendRedirect(SharedConstants.MAIN_APP_URL);
-			return null; // Handle with redirect
-		}
+    String url = request.getRequestURL().toString();
 
-		// -- Now that we verified HTTPS, we can continue with the actual
-		// dispatch process
+    // -- Before doing anything, we verify HTTPS
 
-		if (DispatchRoutingHelper.isRegistration(url)) {
-			return dispatchRegistration.handleRequest(request, response);
-		} else {
-			// Determine destination context and dispatch
-			switch (DispatchRoutingHelper.getDestinationContext(request)) {
-			
-			case SharedConstants.DISPATCH_CONTEXT_MAIN:		
-				return dispatchMain.handleRequest(request, response);
-				
-			case SharedConstants.DISPATCH_CONTEXT_ADMINISTRATOR:
-				return dispatchAdmin.handleRequest(request, response);
-				
-			}
-		}
+    boolean usingHttps = url != null && url.contains("https://");
 
-		return null; // TODO - handle with error page?
+    // I want to deploy on heroku for now
+    // without having ssl
+    usingHttps = true;
 
-	}
+    boolean isDevMode =
+        request.getQueryString() != null
+            && request.getQueryString().contains(SharedConstants.DEV_MODE_QUERY_STRING);
+
+    boolean isByPass =
+        request.getQueryString() != null && request.getQueryString().contains("nohttpstest");
+
+    boolean allowRedirect = Boolean.parseBoolean(System.getProperty("allowRedirect", "" + true));
+
+    // Before doing anything, verify we are on https
+    if (!usingHttps && !isDevMode && !isByPass && allowRedirect) {
+      // TODO log.info("Encountered a nonDevMode NOT using HTTPS - redirect");
+      response.sendRedirect(SharedConstants.MAIN_APP_URL);
+      return null; // Handle with redirect
+    }
+
+    // -- Now that we verified HTTPS, we can continue with the actual
+    // dispatch process
+
+    if (DispatchRoutingHelper.isRegistration(url)) {
+      return dispatchRegistration.handleRequest(request, response);
+    } else {
+      // Determine destination context and dispatch
+      switch (DispatchRoutingHelper.getDestinationContext(request)) {
+
+        case SharedConstants.DISPATCH_CONTEXT_MAIN:
+          return dispatchMain.handleRequest(request, response);
+
+        case SharedConstants.DISPATCH_CONTEXT_ADMINISTRATOR:
+          return dispatchAdmin.handleRequest(request, response);
+
+      }
+    }
+
+    return null; // TODO - handle with error page?
+
+  }
 
 }
