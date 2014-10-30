@@ -8,6 +8,20 @@
 		background-color: #CCC;
 		padding: 10px;
 	}
+	
+	.menuShopButton {
+		cursor:pointer;
+		padding: 18px;
+		position: relative;
+		color: #777777;
+		background-color: blue;
+		
+	}
+	
+	.menuShopButton:hover {
+		background-color: red;
+	}
+	
 	</ui:style>
 
 	<ui:with field="css" type="com.biker.client.common.resource.CoreStyle"></ui:with>
@@ -24,14 +38,13 @@
 			</fast:inner>
 		</fast:FastPress>
 
-		<g:HTMLPanel ui:field="store_context_panel" styleName="{style.store-context-panel}">
+		<g:HTMLPanel ui:field="store_context_panel" styleName="{style.store-context-panel}" visible="false">
 			<ul class="nomargin {css.navItems}">
 				<li>
 					<fast:FastPress ui:field="shop1"
-						styleName="nomargin {css.menuButton} {css.menuButtonClick}">
+						styleName="nomargin {style.menuShopButton}">
 						<fast:inner>
 							<g:HTMLPanel>
-								<i class="fa fa-calculator"></i>
 								<span>Shop 1</span>
 							</g:HTMLPanel>
 						</fast:inner>
@@ -39,10 +52,9 @@
 				</li>
 				<li>
 					<fast:FastPress ui:field="shop2"
-						styleName="nomargin {css.menuButton} {css.menuButtonClick}">
+						styleName="nomargin {style.menuShopButton}">
 						<fast:inner>
 							<g:HTMLPanel>
-								<i class="fa fa-group"></i>
 								<span>Associates</span>
 							</g:HTMLPanel>
 						</fast:inner>
@@ -50,10 +62,9 @@
 				</li>
 				<li>
 					<fast:FastPress ui:field="shop3"
-						styleName="nomargin {css.menuButton} {css.menuButtonClick}">
+						styleName="nomargin {style.menuShopButton}">
 						<fast:inner>
 							<g:HTMLPanel>
-								<i class="fa fa-gear"></i>
 								<span>Shop Settings</span>
 							</g:HTMLPanel>
 						</fast:inner>

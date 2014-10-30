@@ -15,6 +15,7 @@ import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.HTMLPanel;
 import com.google.gwt.user.client.ui.InlineLabel;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.inject.Inject;
@@ -33,6 +34,9 @@ public class MainMenu extends Composite {
 
   @UiField
   FastPress store;
+  
+  @UiField
+  HTMLPanel store_context_panel;
 
   @UiField
   InlineLabel shop_name;
@@ -47,6 +51,7 @@ public class MainMenu extends Composite {
   FastPress shopSettings;
 
   private final PlaceController placeController;
+  private boolean isShopSelectShowing = false;
 
   @Inject
   public MainMenu(PlaceController placeController) {
@@ -62,9 +67,7 @@ public class MainMenu extends Composite {
     store.addPressHandler(new PressHandler() {
       @Override
       public void onPress(PressEvent event) {
-        // We will remove this
-        // Changing org context is out of scope for the MVP
-        // Window.alert("Org Context Button Clicked");
+        toggleShowShopSelect(!isShopSelectShowing);
       }
     });
 
@@ -88,6 +91,11 @@ public class MainMenu extends Composite {
         placeController.goTo(new ShopSettingsPlace());
       }
     });
+  }
+  
+  private void toggleShowShopSelect(boolean show){
+    isShopSelectShowing = show;
+    store_context_panel.setVisible(isShopSelectShowing);
   }
 
 }
