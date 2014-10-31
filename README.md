@@ -47,7 +47,21 @@ Now you can go to: `http://localhost:8080/app/` **don't forget '/app'**
 
 ### Run GWT's Super Dev Mode
 
+
+
+### 2.7.0-rc1 and later
+
 Run GWT's SDM Codeserver (in a new terminal):
+
+```
+mvn gwt:run
+```
+
+*In 2.7.0 'super dev mode' is default.*
+
+### Pre 2.7.0-rc1
+
+*No need to use bookmarks anymore, so you can ignore this*
 
 ```
 mvn gwt:run-codeserver
