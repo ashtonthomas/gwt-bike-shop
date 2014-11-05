@@ -1,7 +1,7 @@
 @def MIN_HEIGHT 200px;
 
 @def PRIMARY_COLOR #35bdda;
-@def NAV_WIDTH 220px;
+@def NAV_WIDTH 250px;
 @def LOGO_HEIGHT 150px;
 
 @def SIDE_NAV_CONTENT #F1F6FF;

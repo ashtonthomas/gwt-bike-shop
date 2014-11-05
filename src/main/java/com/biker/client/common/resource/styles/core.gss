@@ -62,7 +62,7 @@
 }
 
 .main {
-	margin-left: 220px;
+	margin-left: NAV_WIDTH;
 	margin-right: 0;
 	width: auto;
 	background-color: #fff;
