@@ -161,7 +161,7 @@
 						<fast:inner>
 							<g:HTMLPanel>
 								<i class="fa fa-group"></i>
-								<span>Manager Associates</span>
+								<span>Manage Associates</span>
 							</g:HTMLPanel>
 						</fast:inner>
 					</fast:FastPress>
