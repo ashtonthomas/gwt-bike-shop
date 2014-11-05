@@ -9,6 +9,8 @@
 	@def MENU_SECTION_BKG #FAFAFA;
 	@def SECTION_BORDER #EDEDED;
 	
+	.menu {}
+	
 	.store-context-panel {
 		min-height: 20px;
 		border-bottom: 1px solid #F2F2F2;
@@ -43,7 +45,7 @@
 	
 	@external fa;
 	
-	.fa {
+	.menu .fa {
 		margin-right: 10px;
 	}
 	
@@ -51,7 +53,7 @@
 
 	
 
-	<g:HTMLPanel>
+	<g:HTMLPanel styleName="{style.menu}">
 
 		<fast:FastPress ui:field="store"
 			styleName="nomargin {css.menuButton} {css.menuButtonClick} {style.shop-context-button}">
