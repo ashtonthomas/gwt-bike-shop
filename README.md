@@ -75,3 +75,13 @@ http://localhost:9876/
 After you drag these bookmarks to your browser, you can go to the app running on `:8080` and use them.
 
 __Note:__ After clicking the `Dev Mode On` bookmark, you can drag and drop the `Compile` button to the bookmark bar as well. This is a shortcut for **this module only**.
+
+
+## My Notes
+
+### Deploy war to heroku
+
+```
+mvn clean install
+heroku deploy:war --war target/biker-0.0.1-SNAPSHOT.war
+```
