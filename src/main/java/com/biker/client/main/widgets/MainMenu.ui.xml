@@ -2,20 +2,59 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:fast="urn:import:com.biker.client.common.fast">
 
+	<ui:with field="css" type="com.biker.client.common.resource.CoreStyle"></ui:with>
+	
 	<ui:style>
+	
+	@def MENU_SECTION_BKG #FAFAFA;
+	@def SECTION_BORDER #EDEDED;
+	
 	.store-context-panel {
 		min-height: 20px;
-		background-color: #CCC;
-		padding: 10px;
+		border-bottom: 1px solid #F2F2F2;
 	}
+	
+	.shop-context-button {
+		border-bottom: 1px solid SECTION_BORDER;
+	}
+	
+	.menuShopButton {
+		cursor:pointer;
+		padding: 18px;
+		position: relative;
+		color: #777777;
+		background-color: rgb(250, 250, 250);
+		
+	}
+	
+	.menuShopButton:hover {
+		background-color: rgb(240, 240, 240);
+	}
+	
+	.admin-menu {
+		border-top: 1px solid SECTION_BORDER;
+	}
+	
+	.admin-menu-header {
+		padding: 10px;
+		background-color: MENU_SECTION_BKG;
+		border-bottom: 1px solid #F2F2F2;
+	}
+	
+	@external fa;
+	
+	.fa {
+		margin-right: 10px;
+	}
+	
 	</ui:style>
 
-	<ui:with field="css" type="com.biker.client.common.resource.CoreStyle"></ui:with>
+	
 
 	<g:HTMLPanel>
 
 		<fast:FastPress ui:field="store"
-			styleName="nomargin {css.menuButton} {css.menuButtonClick}">
+			styleName="nomargin {css.menuButton} {css.menuButtonClick} {style.shop-context-button}">
 			<fast:inner>
 				<g:HTMLPanel>
 					<g:InlineLabel ui:field="shop_name"></g:InlineLabel>
@@ -24,14 +63,14 @@
 			</fast:inner>
 		</fast:FastPress>
 
-		<g:HTMLPanel ui:field="store_context_panel" styleName="{style.store-context-panel}">
+		<g:HTMLPanel ui:field="store_context_panel" styleName="{style.store-context-panel}" visible="false">
 			<ul class="nomargin {css.navItems}">
 				<li>
 					<fast:FastPress ui:field="shop1"
-						styleName="nomargin {css.menuButton} {css.menuButtonClick}">
+						styleName="nomargin {style.menuShopButton}">
 						<fast:inner>
 							<g:HTMLPanel>
-								<i class="fa fa-calculator"></i>
+								<i class="fa fa-chevron-right"></i>
 								<span>Shop 1</span>
 							</g:HTMLPanel>
 						</fast:inner>
@@ -39,22 +78,22 @@
 				</li>
 				<li>
 					<fast:FastPress ui:field="shop2"
-						styleName="nomargin {css.menuButton} {css.menuButtonClick}">
+						styleName="nomargin {style.menuShopButton}">
 						<fast:inner>
 							<g:HTMLPanel>
-								<i class="fa fa-group"></i>
-								<span>Associates</span>
+								<i class="fa fa-chevron-right"></i>
+								<span>Shop 2</span>
 							</g:HTMLPanel>
 						</fast:inner>
 					</fast:FastPress>
 				</li>
 				<li>
 					<fast:FastPress ui:field="shop3"
-						styleName="nomargin {css.menuButton} {css.menuButtonClick}">
+						styleName="nomargin {style.menuShopButton}">
 						<fast:inner>
 							<g:HTMLPanel>
-								<i class="fa fa-gear"></i>
-								<span>Shop Settings</span>
+								<i class="fa fa-chevron-right"></i>
+								<span>Shop 3</span>
 							</g:HTMLPanel>
 						</fast:inner>
 					</fast:FastPress>
@@ -97,5 +136,36 @@
 				</fast:FastPress>
 			</li>
 		</ul>
+		
+		<div class="{style.admin-menu}">
+			<div class="{style.admin-menu-header}">
+				Admin Menu
+			</div>
+			<ul class="nomargin {css.navItems}">
+				<li>
+					<fast:FastPress ui:field="adminShops"
+						styleName="nomargin {css.menuButton} {css.menuButtonClick}">
+						<fast:inner>
+							<g:HTMLPanel>
+								<i class="fa fa-building-o"></i>
+								<span>Manager Shops</span>
+							</g:HTMLPanel>
+						</fast:inner>
+					</fast:FastPress>
+				</li>
+				<li>
+					<fast:FastPress ui:field="adminAssociates"
+						styleName="nomargin {css.menuButton} {css.menuButtonClick}">
+						<fast:inner>
+							<g:HTMLPanel>
+								<i class="fa fa-group"></i>
+								<span>Manager Associates</span>
+							</g:HTMLPanel>
+						</fast:inner>
+					</fast:FastPress>
+				</li>
+			</ul>
+		</div>
+		
 	</g:HTMLPanel>
 </ui:UiBinder> 
