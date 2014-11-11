@@ -48,7 +48,6 @@ Now you can go to: `http://localhost:8080/app/` **don't forget '/app'**
 ### Run GWT's Super Dev Mode
 
 
-
 ### 2.7.0-rc1 and later
 
 Run GWT's SDM Codeserver (in a new terminal):
