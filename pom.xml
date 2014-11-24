@@ -11,7 +11,7 @@
 	<description>An app to manage bike shops around town</description>
 
 	<properties>
-		<gwtVersion>2.7.0-rc1</gwtVersion>
+		<gwtVersion>2.7.0</gwtVersion>
 		<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -130,7 +130,7 @@
 						</goals>
 					</execution>
 				</executions>
-				<!-- Plugin configuration. There are many available options, see gwt-maven-plugin 
+				<!-- Plugin configuration. There are many available options, see gwt-maven-plugin
 					documentation at codehaus.org -->
 				<configuration>
 					<runTarget>/</runTarget>
